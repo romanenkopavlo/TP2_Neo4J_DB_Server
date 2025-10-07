@@ -10,7 +10,6 @@ export async function initDriver(uri, username, password) {
     } catch (err) {
         console.log(`Connection error\n${err}\nCause: ${err.cause}`)
         await driver.close()
-        return
     }
 }
 
