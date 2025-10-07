@@ -1,6 +1,6 @@
 import express from 'express';
 import {initDriver, getDriver} from './neo4j.js';
-import {URI, USERNAME, PASSWORD} from './constants.js'
+import {URI, USERNAME, PASSWORD} from './constants.js';
 
 let driver;
 const app = express();
