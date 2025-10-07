@@ -5,7 +5,7 @@ import {URI, USERNAME, PASSWORD} from './constants.js'
 let driver;
 const app = express();
 app.use(express.json());
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 const port = 3000;
 
