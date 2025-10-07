@@ -6,6 +6,7 @@ export function toNativeTypes(properties) {
         return [ key, value ]
     }))
 }
+
 /**
  * Convert an individual value to its JavaScript equivalent
  *
