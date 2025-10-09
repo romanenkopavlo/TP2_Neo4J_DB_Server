@@ -31,13 +31,11 @@ export default class MovieService {
         try {
             const res = await session.executeRead((tx) =>
                 tx.run(
-                    "MATCH (m:Movie {imdbId: $imdbId}) RETURN m SKIP $skip LIMIT $limit", { imdbId, skip: int(skip), limit: int(limit)}
+                    "MATCH (m:Movie {imdbId: $imdbId})-[r:RATED]-(u:User) with m, avg(r.rating) as rating RETURN m{ .*, rating } as movie SKIP $skip LIMIT $limit", {imdbId, skip: int(skip), limit: int(limit)}
                 )
             );
 
-            console.log(toNativeTypes(res.records[0].get("m")));
-
-            return toNativeTypes(res.records[0].get("m"));
+            return toNativeTypes(res.records[0].get("movie"));
         } finally {
             await session.close()
         }

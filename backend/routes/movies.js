@@ -5,7 +5,7 @@ import MovieService from "../movies.service.js";
 export const moviesRouter = new Router();
 
 moviesRouter.get("/", async (req, res) => {
-    let limit = 3;
+    let limit = 6;
     let skip = 0;
 
     const driver = getDriver();
