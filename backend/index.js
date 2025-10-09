@@ -2,13 +2,17 @@ import express from 'express';
 import {initDriver, getDriver} from './neo4j.js';
 import {URI, USERNAME, PASSWORD} from './constants.js';
 import {moviesRouter} from "./routes/movies.js";
+import {moviesRatings} from "./routes/ratings.js";
+import bodyParser from 'body-parser';
 
 let driver;
 const app = express();
+app.use(bodyParser.json())
 app.use(express.json());
 app.use(express.static('public'));
 
 app.use('/movies', moviesRouter);
+app.use('/ratings', moviesRatings);
 
 const port = 3000;
 
