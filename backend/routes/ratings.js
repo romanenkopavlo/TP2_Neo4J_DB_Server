@@ -18,6 +18,6 @@ moviesRatings.post("/", async (req, res) => {
     console.log(response.records[0]?.get("r"));
 
     return response.json({
-        message: `Le fim ${movie_id} a désormais une note personnelle de ${score}`
+        message: `Le film ${movie_id} a désormais une note personnelle de ${score}`
     });
 })
