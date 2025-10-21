@@ -1,5 +1,5 @@
 import {int} from "neo4j-driver";
-import {toNativeTypes} from "./utils.js";
+import {toNativeTypes} from "../utils.js";
 
 export default class MovieService {
     driver;

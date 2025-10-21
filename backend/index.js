@@ -4,6 +4,7 @@ import {URI, USERNAME, PASSWORD} from './constants.js';
 import {moviesRouter} from "./routes/movies.js";
 import {moviesRatings} from "./routes/ratings.js";
 import bodyParser from 'body-parser';
+import {moviesRecommendations} from "./routes/recommendations.js";
 
 let driver;
 const app = express();
@@ -13,6 +14,7 @@ app.use(express.static('public'));
 
 app.use('/movies', moviesRouter);
 app.use('/ratings', moviesRatings);
+app.use('/reco', moviesRecommendations);
 
 const port = 3000;
 

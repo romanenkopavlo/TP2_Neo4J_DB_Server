@@ -1,6 +1,6 @@
 import {Router} from "express"
 import {getDriver} from "../neo4j.js";
-import MovieService from "../movies.service.js";
+import MovieService from "../services/movies.service.js";
 
 export const moviesRouter = new Router();
 
