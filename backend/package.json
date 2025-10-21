@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "db:start": "NEO4J_HOME=/users/but/info/romanenp/nouvelles_bd/iutmdb_data JAVA_HOME=/soft/JAVA/jdk-21.0.4 /soft/Neo4j/neo4j/bin/neo4j start",
-    "db:stop": "JAVA_HOME=/soft/JAVA/jdk-21.0.4 /soft/Neo4j/neo4j/bin/neo4j stop"
+    "db:stop": "NEO4J_HOME=/users/but/info/romanenp/nouvelles_bd/iutmdb_data JAVA_HOME=/soft/JAVA/jdk-21.0.4 /soft/Neo4j/neo4j/bin/neo4j stop"
   },
   "keywords": [],
   "author": "",
